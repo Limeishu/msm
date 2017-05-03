@@ -1,0 +1,26 @@
+.page {
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: relative;
+    &.fullscreen {
+        min-height: 100vh;
+        @include backgroundConfig;
+        .container {
+            width: 100vw;
+            .content {
+                width: 100%;
+            }
+        }
+    }
+    &.darken {
+        >div {
+            background: $black;
+        }
+    }
+    &.lighten {
+        >div {
+            background: hsla(0, 0, 100%, .3);
+        }
+    }
+}

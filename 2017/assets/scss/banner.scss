@@ -1,0 +1,96 @@
+#banner {
+	@include flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	-webkit-flex-direction: column;
+	-webkit-justify-content: center;
+	height: 100%;
+	overflow: hidden;
+	background-color: $pink;
+	header {
+		display: flex;
+		position: relative;
+		text-align: center;
+		color: $white;
+		flex-direction: column;
+		-webkit-flex-direction: column;
+		justify-content: center;
+		-webkit-justify-content: center;
+		filter: drop-shadow(0 0 20px $black);
+		-webkit-filter: drop-shadow(0 0 20px $black);
+		-webkit-backdrop-filter: drop-shadow(0 0 20px $black);
+		img {
+			margin: 1em auto;
+			width: 40%;
+		}
+		h1 {
+			margin: 0 auto;
+			font-weight: 200;
+			font-size: $title-xl * 1.5;
+			font-weight: 200;
+			display: block;
+		}
+		h2 {
+			margin: 0 auto;
+			font-weight: 200;
+			color: $light-gray;
+			display: block;
+			font-size: $title-m;
+			b {
+				margin: 0 .5em;
+				color: $white;
+				font-weight: 400;
+			}
+		}
+		p {
+			margin: 0 auto;
+			padding: .5em;
+			font-weight: 200;
+			color: $light-gray;
+			display: block;
+			max-width: 980px;
+		}
+	}
+	&:before {
+		background: url("../../assets/images/banner.svg");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: left top;
+		background-size: contain;
+		content: '';
+		display: block;
+		position: absolute;
+		height: 100%;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	#banner {
+		height: 100%;
+		header {
+			img {
+				width: 80%;
+			}
+		}
+		&:before {
+			height: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#banner {
+		header {
+			h1 {
+				font-size: $title-xl;
+			}
+			p {
+				font-size: $subtitle-s;
+			}
+		}
+	}
+}

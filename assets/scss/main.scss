@@ -1,0 +1,107 @@
+@import "compass/reset";
+@import "color";
+@import "font";
+
+a {
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: $gray;
+}
+
+#app {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.countdown {
+    transition: all .3s;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        transition: all .3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        header {
+            filter: drop-shadow(0 0 3px rgba($black, .5));
+            transition: all .3s;
+            .title {
+                font-weight: 200;
+                font-size: $title * 2;
+            }
+            .subtitle {
+                margin: 1em 0;
+            }
+        }
+        .content {
+            margin: 2em 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .counter {
+                position: relative;
+                transition: all .3s;
+                font-weight: 100;
+                font-size: $title * 1.5;
+                display: flex;
+                justify-content: center;
+                width: 2em;
+                height: 3em;
+                filter: drop-shadow(0 0 3px rgba($black, .5));
+                span {
+                    letter-spacing: .25em;
+                    padding-left: .25em;
+                }
+                $counterContents: (1, '日') (2, '時') (3, '分') (4, '秒');
+                @each $contents in $counterContents {
+                    $nth: nth($contents, 1);
+                    $content: nth($contents, 2);
+                    &:nth-child(#{$nth}) {
+                        &:after {
+                            color: $gray;
+                            background-color: $white;
+                            height: $title;
+                            width: $title;
+                            border-radius: 50%;
+                            padding: .5em;
+                            top: 2em;
+                            position: absolute;
+                            font-size: $title;
+                            content: $content;
+                            box-shadow: 0 0 .5em 3px rgba($black, .3);
+                        }
+                    }
+                }
+            }
+        }
+        .link {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+.button {
+    display: inline-flex;
+    font-size: $content;
+    font-weight: 200;
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 3em;
+    padding: .25em 1em;
+    justify-content: center;
+    transition: all .3s;
+    &:hover {
+        background-color: $white;
+        color: $gray;
+    }
+}

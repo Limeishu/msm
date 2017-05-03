@@ -1,0 +1,46 @@
+//mixin
+//background
+@mixin backgroundConfig {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+//logo
+@mixin logoConfig {
+    width: 20em;
+    height: 20em;
+    border-radius: 100%;
+    display: block;
+    margin: .5em;
+}
+
+//icon
+@mixin iconConfig {
+    transition: all .3s;
+    text-align: center;
+    font-family: 'FontAwesome';
+    color: $white;
+    font-size: $subtitle;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    padding: .4em;
+    border: 1px solid $white;
+    border-radius: 50%;
+    line-height: 1em;
+    margin: 0 auto;
+    &:hover {
+        background-color: $white;
+        color: $black;
+    }
+}
+
+@mixin column {
+    flex-direction: column;
+}
+
+@mixin row {
+    flex-direction: row;
+}

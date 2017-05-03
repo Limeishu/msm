@@ -1,0 +1,49 @@
+@import "util";
+$colorThemes: (init $black) (yellow $dark-yellow) (green $green);
+@each $colorClass in $colorThemes {
+  $class: nth($colorClass, 1);
+  $theme: nth($colorClass, 2);
+  #footer.#{$class} {
+    overflow: hidden;
+    bottom: 0;
+    position: relative;
+    color: $white;
+    background-color: $gray;
+    text-align: center;
+    padding: 2em 0em;
+    display: block;
+    opacity: .9;
+    z-index: 0;
+    .icons {
+      display: block;
+      margin: 1em auto;
+      position: relative;
+      li {
+        margin: .5em;
+        display: inline-block;
+        .icon {
+          padding: .5em;
+          width: 1em;
+          height: 1em;
+          border: 1px solid $white;
+          border-radius: 100%;
+          transition: all .3s;
+          @include iconConfig;
+          &:hover {
+            background-color: $white;
+            color: $theme;
+          }
+        }
+        .label {
+          display: none;
+        }
+      }
+    }
+    .copyright {
+      display: block;
+      margin: auto;
+      position: relative;
+      font-size: $footnote;
+    }
+  }
+}
