@@ -13,16 +13,16 @@ var app = new Vue({
     }
 })
 
-var content, distance
+var content = {},
+    distance
 
 function init() {
-    $.getJSON('./config.json', (data) => {
-        content = data
-    })
+    app.end = new Date(parseInt((content.end).split(',')[0]), parseInt((content.end).split(',')[1]), parseInt((content.end).split(',')[2])).getTime()
+    app.title = content.title
+    app.msgs = content.msgs
 }
 
 function time() {
-    app.end = new Date(content.end).getTime()
     distance = app.end - new Date().getTime()
     app.count.dd = Math.floor(distance / (1000 * 60 * 60 * 24))
     app.count.hh = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
@@ -30,15 +30,10 @@ function time() {
     app.count.ss = Math.floor((distance % (1000 * 60)) / 1000)
 }
 
-function go() {
-    app.title = content.title
-    app.msgs = content.msgs
-    setInterval("time()", 1000)
-}
-
 $(document).ready(function () {
-    go()
+    $.getJSON('./config.json', (data) => {
+        content = data
+        init()
+    })
+    setInterval("time()", 1000)
 })
-
-init()
-go()

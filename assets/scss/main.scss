@@ -1,6 +1,18 @@
 @import "compass/reset";
 @import "color";
 @import "font";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+}
 
 a {
     text-decoration: none;
@@ -47,6 +59,7 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            font-weight: 100;
             .counter {
                 position: relative;
                 transition: all .3s;
@@ -67,6 +80,7 @@ body {
                     $content: nth($contents, 2);
                     &:nth-child(#{$nth}) {
                         &:after {
+                            font-family: 'Noto Sans TC', sans-serif;
                             color: $gray;
                             background-color: $white;
                             height: $title;
@@ -74,6 +88,8 @@ body {
                             border-radius: 50%;
                             padding: .5em;
                             top: 2em;
+                            left: .5em;
+                            margin: 0 auto;
                             position: absolute;
                             font-size: $title;
                             content: $content;

@@ -250,6 +250,18 @@ a {
   text-indent: 2em;
   white-space: pre-line; }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+* {
+  font-family: 'Noto Sans TC', sans-serif; }
+
 a {
   text-decoration: none; }
 
@@ -288,7 +300,8 @@ body {
       margin: 2em 0;
       display: flex;
       flex-direction: row;
-      justify-content: space-around; }
+      justify-content: space-around;
+      font-weight: 100; }
       .countdown .container .content .counter {
         position: relative;
         transition: all .3s;
@@ -303,6 +316,7 @@ body {
           letter-spacing: .25em;
           padding-left: .25em; }
         .countdown .container .content .counter:nth-child(1):after {
+          font-family: 'Noto Sans TC', sans-serif;
           color: #606060;
           background-color: #F8F3F5;
           height: 2.5rem;
@@ -310,11 +324,14 @@ body {
           border-radius: 50%;
           padding: .5em;
           top: 2em;
+          left: .5em;
+          margin: 0 auto;
           position: absolute;
           font-size: 2.5rem;
           content: "日";
           box-shadow: 0 0 0.5em 3px rgba(39, 40, 45, 0.3); }
         .countdown .container .content .counter:nth-child(2):after {
+          font-family: 'Noto Sans TC', sans-serif;
           color: #606060;
           background-color: #F8F3F5;
           height: 2.5rem;
@@ -322,11 +339,14 @@ body {
           border-radius: 50%;
           padding: .5em;
           top: 2em;
+          left: .5em;
+          margin: 0 auto;
           position: absolute;
           font-size: 2.5rem;
           content: "時";
           box-shadow: 0 0 0.5em 3px rgba(39, 40, 45, 0.3); }
         .countdown .container .content .counter:nth-child(3):after {
+          font-family: 'Noto Sans TC', sans-serif;
           color: #606060;
           background-color: #F8F3F5;
           height: 2.5rem;
@@ -334,11 +354,14 @@ body {
           border-radius: 50%;
           padding: .5em;
           top: 2em;
+          left: .5em;
+          margin: 0 auto;
           position: absolute;
           font-size: 2.5rem;
           content: "分";
           box-shadow: 0 0 0.5em 3px rgba(39, 40, 45, 0.3); }
         .countdown .container .content .counter:nth-child(4):after {
+          font-family: 'Noto Sans TC', sans-serif;
           color: #606060;
           background-color: #F8F3F5;
           height: 2.5rem;
@@ -346,6 +369,8 @@ body {
           border-radius: 50%;
           padding: .5em;
           top: 2em;
+          left: .5em;
+          margin: 0 auto;
           position: absolute;
           font-size: 2.5rem;
           content: "秒";
