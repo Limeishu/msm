@@ -17,7 +17,7 @@ var content = {},
     distance
 
 function init() {
-    app.end = new Date(parseInt((content.end).split(',')[0]), parseInt((content.end).split(',')[1]), parseInt((content.end).split(',')[2])).getTime()
+    app.end = new Date((parseInt((content.end).split(',')[0])), (parseInt((content.end).split(',')[1]) - 1), (parseInt((content.end).split(',')[2]))).getTime()
     app.title = content.title
     app.msgs = content.msgs
 }
