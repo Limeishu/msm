@@ -30,10 +30,15 @@ function time() {
     app.count.ss = Math.floor((distance % (1000 * 60)) / 1000)
 }
 
-init()
-
-$(document).ready(function () {
+function go() {
     app.title = content.title
     app.msgs = content.msgs
     setInterval("time()", 1000)
+}
+
+$(document).ready(function () {
+    go()
 })
+
+init()
+go()
