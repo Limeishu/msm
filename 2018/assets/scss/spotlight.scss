@@ -1,0 +1,370 @@
+.spotlight {
+    overflow: hidden;
+    @include backgroundConfig;
+    color: $white;
+    height: 100vh;
+    display: block;
+    &.left {
+        background: url("images/what.jpg") 0 / cover fixed;
+        .container {
+            z-index: 0;
+            height: 100%;
+            width: 40%;
+            position: relative;
+            background: hsla(0, 0%, 100%, .5);
+            overflow: hidden;
+            .content {
+                height: calc(100% - 1em * 2);
+                display: flex;
+                padding: 1em 2em;
+                flex-direction: column;
+                justify-content: space-around;
+                header {
+                    border-left: 3px solid $green;
+                    margin: auto 1em;
+                    margin-bottom: 1em;
+                    h1 {
+                        padding: 0 1rem;
+                        font-weight: 200;
+                        position: relative;
+                        display: flex;
+                        font-size: $title-xl;
+                    }
+                    h3 {
+                        padding: 1.5rem 1rem;
+                        padding-top: .25rem;
+                        font-weight: 200;
+                        position: relative;
+                        display: flex;
+                        font-size: $subtitle;
+                    }
+                    p {
+                        margin-left: calc(#{$title-xl} * 2+2em);
+                        padding: 0 1rem;
+                        display: flex;
+                        font-size: $content-xl;
+                    }
+                }
+                #link {
+                    margin: auto;
+                    margin-top: 1em;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    .button {
+                        display: inline-block;
+                        position: relative;
+                    }
+                }
+            }
+            &:before {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                margin: -3em;
+                background: url("images/what.jpg") 0 / cover fixed;
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            .container {
+                width: 60%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            color: $black;
+            height: 100%;
+            .container {
+                width: 100%;
+                .content {
+                    padding: 1.5em .5em;
+                    height: calc(100% - 1.5em *2);
+                    text-align: center;
+                    justify-content: center;
+                    header {
+                        border: 0;
+                        margin: 0;
+                        padding: 0;
+                        h1 {
+                            font-size: $title-l;
+                            display: block;
+                            margin: 0 auto;
+                            b {
+                                border: 0;
+                                border-bottom: 3px solid $green;
+                                display: block;
+                                margin: .2em auto;
+                                padding: 0;
+                            }
+                        }
+                        p {
+                            display: block;
+                            padding: .5em;
+                        }
+                    }
+                    #link {
+                        width: 100%;
+                        display: block;
+                        margin: 0;
+                        .button {
+                            color: $black;
+                            border-color: $black;
+                            display: block;
+                            &:hover {
+                                border-color: $white;
+                            }
+                        }
+                    }
+                }
+                &:before {
+                    filter: none;
+                    background: none;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    &.right {
+        .container {
+            right: 0;
+            z-index: 0;
+            height: 100%;
+            width: 40%;
+            position: relative;
+            background: hsla(0, 0%, 100%, .5);
+            overflow: hidden;
+            .content {
+                height: calc(100% - 1em * 2);
+                display: flex;
+                padding: 1em 2em;
+                flex-direction: column;
+                justify-content: space-around;
+                header {
+                    border-left: 3px solid $green;
+                    margin: auto 1em;
+                    margin-bottom: 1em;
+                    h1 {
+                        padding: 0 1rem;
+                        font-weight: 200;
+                        position: relative;
+                        display: flex;
+                        font-size: $title-xl;
+                    }
+                    h3 {
+                        padding: 1.5rem 1rem;
+                        padding-top: .25rem;
+                        font-weight: 200;
+                        position: relative;
+                        display: flex;
+                        font-size: $subtitle;
+                    }
+                    p {
+                        margin-left: calc(#{$title-xl} * 2+2em);
+                        padding: 0 1rem;
+                        display: flex;
+                        font-size: $content-xl;
+                    }
+                }
+                #link {
+                    margin: auto;
+                    margin-top: 1em;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    .button {
+                        display: inline-block;
+                        position: relative;
+                    }
+                }
+            }
+            &:before {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                margin: -3em;
+                background: url("images/intro.jpg") 0 / cover fixed;
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            .container {
+                width: 60%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            color: $black;
+            height: 100%;
+            .container {
+                width: 100%;
+                .content {
+                    padding: 1.5em .5em;
+                    height: calc(100% - 1.5em *2);
+                    text-align: center;
+                    justify-content: center;
+                    header {
+                        border: 0;
+                        margin: 0;
+                        padding: 0;
+                        h1 {
+                            font-size: $title-l;
+                            display: block;
+                            margin: 0 auto;
+                            b {
+                                border: 0;
+                                border-bottom: 3px solid $green;
+                                display: block;
+                                margin: .2em auto;
+                                padding: 0;
+                            }
+                        }
+                        p {
+                            display: block;
+                            padding: .5em;
+                        }
+                    }
+                    #link {
+                        width: 100%;
+                        display: block;
+                        margin: 0;
+                        .button {
+                            color: $black;
+                            border-color: $black;
+                            display: block;
+                            &:hover {
+                                border-color: $white;
+                            }
+                        }
+                    }
+                }
+                &:before {
+                    filter: none;
+                    background: none;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    &.full {
+        background: url("images/intro.jpg") 0 / cover fixed;
+        color: $white !important;
+        .container {
+            right: 0;
+            z-index: 0;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            background: hsla(0, 0%, 100%, .5);
+            overflow: hidden;
+            .content {
+                height: calc(100% - 1em * 2);
+                display: flex;
+                padding: 1em 2em;
+                flex-direction: column;
+                justify-content: space-around;
+                header {
+                    margin: auto 1em;
+                    >* {
+                        justify-content: center;
+                    }
+                    h1 {
+                        padding: 0 1rem;
+                        font-weight: 200;
+                        position: relative;
+                        display: flex;
+                        font-size: $title-xl;
+                    }
+                    h3 {
+                        padding: 1.5rem 1rem;
+                        padding-top: .25rem;
+                        font-weight: 200;
+                        position: relative;
+                        display: flex;
+                        font-size: $subtitle;
+                    }
+                    p,
+                    li>p {
+                        justify-content: center;
+                        margin-left: calc(#{$title-xl} * 2+2em);
+                        padding: 0 1rem;
+                        display: flex;
+                        font-size: $content-xl * 1.2;
+                    }
+                }
+                #link {
+                    margin: auto;
+                    margin-top: 1em;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    .button {
+                        display: inline-block;
+                        position: relative;
+                    }
+                }
+            }
+            &:before {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                margin: -3em;
+                background: url("images/intro.jpg") 0 / cover fixed;
+                background-attachment: local;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            color: $black !important;
+            height: 100%;
+            .container {
+                width: 100%;
+                .content {
+                    padding: 1.5em .5em;
+                    height: calc(100% - 1.5em *2);
+                    text-align: center;
+                    justify-content: center;
+                    header {
+                        border: 0;
+                        margin: 0;
+                        padding: 0;
+                        h1 {
+                            font-size: $title-m;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                        p {
+                            display: block;
+                            padding: .5em;
+                            font-size: $content-m;
+                        }
+                        p,
+                        li>p {
+                            display: block;
+                            padding: .5em;
+                            font-size: $content-m;
+                        }
+                    }
+                }
+                &:before {
+                    filter: none;
+                    background: none;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}

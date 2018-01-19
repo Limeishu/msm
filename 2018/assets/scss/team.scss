@@ -1,0 +1,178 @@
+#team {
+	display: flex;
+	color: $black;
+	text-align: center;
+	height: 150%;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	justify-content: center;
+	-webkit-justify-content: center;
+	header {
+		margin: 1em 0;
+		flex-direction: column;
+		-webkit-flex-direction: column;
+		justify-content: center;
+		-webkit-justify-content: center;
+		display: flex;
+		h1 {
+			margin: .25em auto;
+			display: block;
+			position: relative;
+			text-align: center;
+			font-size: $title-xl;
+			border-bottom: 3px solid $blue;
+		}
+		p {
+			display: block;
+			position: relative;
+			margin: 0 auto;
+			font-size: $content-xl;
+		}
+	}
+	.container {
+		margin: 1em 0;
+		position: relative;
+		display: flex;
+		padding: 2em;
+		height: 70%;
+		justify-content: space-around;
+		align-content: space-around;
+		flex-flow: wrap;
+		.member {
+			margin: 1em 0;
+			padding: 1em;
+			position: relative;
+			border-radius: 1em;
+			box-shadow: 2px 2px 5px rgba($black, .5);
+			flex-direction: row;
+			-webkit-flex-direction: row;
+			justify-content: center;
+			-webkit-justify-content: center;
+			width: 40%;
+			height: auto;
+			display: inline-flex;
+			.pic {
+				width: 30%;
+				flex-direction: column;
+				-webkit-flex-direction: column;
+				display: flex;
+				margin: auto;
+				img {
+					display: none;
+				}
+				.image {
+					@include backgroundConfig;
+					display: flex;
+					position: relative;
+					margin: 0 auto;
+					width: 8em;
+					height: 8em;
+					border-radius: 50%;
+					box-shadow: 2px 2px 5px rgba($white, .5);
+				}
+				h1 {
+					position: relative;
+					margin: 0 auto;
+					display: block;
+				}
+			}
+			.content {
+				width: 70%;
+				flex-direction: column;
+				-webkit-flex-direction: column;
+				display: flex;
+				p {
+					font-size: $content-l;
+					display: flex;
+				}
+				.info {
+					display: block;
+					margin: .5em auto;
+					a {
+						font-size: $content-xl;
+						border: 0;
+						display: inline-block;
+						color: $black;
+						padding: 0;
+						.fa-angle-right {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#team {
+		padding: 4em 0;
+		height: 200%;
+		header {
+			padding: 1em 2em;
+		}
+		.container {
+			justify-content: space-around;
+			align-items: space-around;
+			align-content: space-around;
+			flex-flow: wrap;
+			height: 100%;
+			.member {
+				display: flex;
+				width: 100%;
+				.content {
+					padding: 2em 1em;
+					h1 {
+						font-size: $subtitle-m;
+					}
+					p {
+						font-size: $content-m;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#team {
+		display: block;
+		padding: 4em 0;
+		height: auto;
+		header {
+			padding: 1em 2em;
+			h1 {
+				font-size: $title-m;
+			}
+			p {
+				font-size: $subtitle-s;
+			}
+		}
+		.container {
+			justify-content: space-around;
+			align-items: space-around;
+			align-content: space-around;
+			flex-flow: wrap;
+			height: 100%;
+			.member {
+				display: flex;
+				width: 100%;
+				flex-direction: column;
+				-webkit-flex-direction: column;
+				.pic {
+					width: 100%
+				}
+				.content {
+					width: 100%;
+					padding: 0;
+					h1 {
+						font-size: $subtitle-m;
+					}
+					p {
+						font-size: $content-m;
+					}
+				}
+			}
+		}
+	}
+}
