@@ -6,6 +6,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  @media screen and (max-width: 1200px) {
+    padding: 0;
+    width: 100%;
+    min-height: 0;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -26,6 +31,9 @@
     h1 {
       font-size: 32pt;
       font-weight: 600;
+      @media screen and (max-width: 1200px) {
+        font-size: 24pt;
+      }
       &:before {
         content: '#';
         color: $tone;
@@ -33,11 +41,17 @@
       }
     }
     h2 {
+      @media screen and (max-width: 1200px) {
+        font-size: 18pt;
+      }
       font-size: 22pt;
       margin-bottom: 1rem;
       font-weight: 400;
     }
     >p {
+      @media screen and (max-width: 1200px) {
+        font-size: 10pt;
+      }
       font-size: 14pt;
       letter-spacing: 2pt;
       line-height: 2;
@@ -47,6 +61,9 @@
         margin-right: 2rem;
         width: 7rem;
         letter-spacing: 2pt;
+        @media screen and (max-width: 1200px) {
+          margin-right: 1rem;
+        }
       }
     }
   }

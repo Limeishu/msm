@@ -25,6 +25,12 @@
     height: 100%;
     background: linear-gradient(90deg, rgba($black, 0) 70%, rgba($black, .7));
   }
+  @media screen and (max-width: 1200px) {
+    grid-template-areas: "sidebar" "main" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+  }
 }
 
 .main {
@@ -34,4 +40,8 @@
   grid-area: main;
   margin-left: 240pt;
   margin-right: 250pt;
+  @media screen and (max-width: 1200px) {
+    margin: 0;
+    width: 100%;
+  }
 }
