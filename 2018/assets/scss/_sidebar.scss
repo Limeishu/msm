@@ -8,8 +8,10 @@
   align-items: center;
   grid-area: sidebar;
   .logo {
-    display: flex;
-    justify-content: center;
+    @media screen and (max-width: 1200px) {
+      display: flex;
+      justify-content: center;
+    }
     width: 100%;
     filter: drop-shadow(0 0 10pt $white);
     img {
@@ -17,6 +19,10 @@
       filter: drop-shadow(0 0 10pt $white);
       @media screen and (max-width: 1200px) {
         width: 50%;
+      }
+      &:before {
+        padding-top: 100%;
+        content: "";
       }
     }
   }
