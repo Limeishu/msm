@@ -28,5 +28,9 @@
     letter-spacing: 2px;
     color: darken($white, 10);
     font-weight: 200;
+    @media screen and (max-width: 1200px) {
+      font-size: 8pt;
+      color: darken($white, 5);
+    }
   }
 }

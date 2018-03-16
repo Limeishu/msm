@@ -8,11 +8,16 @@
   align-items: center;
   grid-area: sidebar;
   .logo {
+    display: flex;
+    justify-content: center;
     width: 100%;
     filter: drop-shadow(0 0 10pt $white);
     img {
       width: 100%;
       filter: drop-shadow(0 0 10pt $white);
+      @media screen and (max-width: 1200px) {
+        width: 50%;
+      }
     }
   }
   .menu {
@@ -21,6 +26,9 @@
     flex-direction: column;
     width: 100%;
     margin-top: auto;
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
     ul {
       display: flex;
       flex-direction: column;
