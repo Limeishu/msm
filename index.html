@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta charset="utf-8" />
-    <meta name="og:description" content="在三峽自2012年起，由李梅樹紀念館主辦「梅樹月」藝術文化活動，傳承與發揚李梅樹熱愛鄉土的精神，以藝術的平民化、生活化為理念，在地人文歷史的關注為本，結合跨領域的當代藝術家，希望讓藝術跨越美術館的藩籬，傳遞給人們更多的感動。" />
+    <meta name="og:description" content="在三峽自2012年起，由李梅樹紀念館主辦「梅樹月」藝術文化活動，傳承與發揚李梅樹熱愛鄉土的精神，以藝術的平民化、生活化為理念，在地人文歷史的關注為本，結合跨領域的當代藝術家，希望讓藝術跨越美術館的藩籬，傳遞給人們更多的感動。"
+    />
     <meta property="og:title" content="梅樹月官方網站" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://msm.limeishu.org.tw" />
@@ -29,10 +30,16 @@
                     <p class="subtitle" v-for="msg in msgs">{{ msg }}</p>
                 </header>
                 <div class="content">
-                    <div class="counter" v-for="count in count"><span>{{ count }}</span></div>
+                    <div class="counter" v-for="count in count">
+                        <span>{{ count }}</span>
+                    </div>
                 </div>
-                <div class="link"><a href="/2017" class="button">2017 梅樹月官網</a></div>
-		<!-- <div class="link"><a href="/2018" class="button">2018 梅樹月官網</a></div> -->
+                <div class="link">
+                    <a href="/2017" class="button">2017 梅樹月官網</a>
+                </div>
+                <div class="link">
+                    <a href="/2018" class="button">2018 梅樹月官網</a>
+                </div>
             </div>
         </div>
     </div>
