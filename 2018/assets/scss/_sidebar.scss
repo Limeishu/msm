@@ -1,0 +1,45 @@
+.sidebar {
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: sidebar;
+  .logo {
+    width: 100%;
+    filter: drop-shadow(0 0 10pt $white);
+    img {
+      width: 100%;
+      filter: drop-shadow(0 0 10pt $white);
+    }
+  }
+  .menu {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: auto;
+    ul {
+      display: flex;
+      flex-direction: column;
+      font-size: 14pt;
+      align-items: flex-end;
+      li {
+        margin: 10pt 0;
+        a {
+          color: $white;
+          background-color: $tone;
+          padding: 3pt 7pt;
+          text-align: center;
+          text-decoration: none;
+          &:hover {
+            color: $tone;
+            background-color: $black;
+          }
+        }
+      }
+    }
+  }
+}

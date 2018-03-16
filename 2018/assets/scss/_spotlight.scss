@@ -1,0 +1,53 @@
+.spotlight {
+  min-height: calc(100vh - 4rem);
+  width: calc(100% - 4rem);
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .container {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    padding: 2rem;
+    line-height: 1.4;
+    .tag {
+      display: flex;
+      flex-direction: row;
+      span {
+        background-color: $tone;
+        border-radius: 3pt;
+        color: $white;
+        padding: 1pt 5pt;
+        margin-right: 1rem;
+      }
+    }
+    h1 {
+      font-size: 32pt;
+      font-weight: 600;
+      &:before {
+        content: '#';
+        color: $tone;
+        margin-right: 1rem;
+      }
+    }
+    h2 {
+      font-size: 22pt;
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+    >p {
+      font-size: 14pt;
+      letter-spacing: 2pt;
+      line-height: 2;
+      color: $content;
+      >span {
+        color: $gray;
+        margin-right: 2rem;
+        width: 7rem;
+        letter-spacing: 2pt;
+      }
+    }
+  }
+}
