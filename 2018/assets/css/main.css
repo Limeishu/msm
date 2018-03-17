@@ -129,7 +129,9 @@ table {
     font-weight: 200; }
     @media screen and (max-width: 1200px) {
       .footer .info {
-        font-size: 6pt;
+        font-size: 7pt;
+        font-weight: 300;
+        margin: 1rem 2rem;
         color: #f2f2f2; } }
   .footer .link {
     display: flex;
@@ -166,6 +168,10 @@ table {
       line-height: 1.4;
       font-weight: 300;
       text-align: center; }
+      @media screen and (max-width: 1200px) {
+        .footer .link .copyright {
+          font-size: 8pt;
+          margin-bottom: 2rem; } }
       .footer .link .copyright a {
         font-weight: 500;
         transition: all .3s; }
