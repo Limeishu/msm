@@ -23,14 +23,65 @@
   }
   .info {
     margin: 2rem;
-    font-size: 10pt;
+    font-size: 8pt;
     line-height: 1.5;
     letter-spacing: 2px;
     color: darken($white, 10);
     font-weight: 200;
     @media screen and (max-width: 1200px) {
-      font-size: 8pt;
+      font-size: 6pt;
       color: darken($white, 5);
+    }
+  }
+  .link {
+    display: flex;
+    width: calc(100% - 4rem);
+    margin: 0 2rem;
+    flex-direction: column;
+    color: $white;
+    a {
+      color: $white;
+    }
+    .logo {
+      display: flex;
+      height: 48pt;
+      overflow: hidden;
+      position: relative;
+      img {
+        width: 100%;
+        transform: translateY(-48pt);
+        filter: drop-shadow(0 48pt 0 $white);
+      }
+    }
+    .social {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 10pt 0;
+      li {
+        height: 15pt;
+        width: 15pt;
+        a {
+          font-size: 10pt;
+          transition: all .3s;
+          &:hover {
+            color: $tone;
+          }
+        }
+      } 
+    }
+    .copyright {
+      font-size: 9pt;
+      line-height: 1.4;
+      font-weight: 300;
+      text-align: center;
+      a {
+        font-weight: 500;
+        transition: all .3s;
+        &:hover {
+          color: $tone;
+        }
+      }
     }
   }
 }

@@ -122,15 +122,55 @@ table {
       border: 1px solid #FFFFFF; }
   .footer .info {
     margin: 2rem;
-    font-size: 10pt;
+    font-size: 8pt;
     line-height: 1.5;
     letter-spacing: 2px;
     color: #e6e6e6;
     font-weight: 200; }
     @media screen and (max-width: 1200px) {
       .footer .info {
-        font-size: 8pt;
+        font-size: 6pt;
         color: #f2f2f2; } }
+  .footer .link {
+    display: flex;
+    width: calc(100% - 4rem);
+    margin: 0 2rem;
+    flex-direction: column;
+    color: #FFFFFF; }
+    .footer .link a {
+      color: #FFFFFF; }
+    .footer .link .logo {
+      display: flex;
+      height: 48pt;
+      overflow: hidden;
+      position: relative; }
+      .footer .link .logo img {
+        width: 100%;
+        transform: translateY(-48pt);
+        filter: drop-shadow(0 48pt 0 #FFFFFF); }
+    .footer .link .social {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 10pt 0; }
+      .footer .link .social li {
+        height: 15pt;
+        width: 15pt; }
+        .footer .link .social li a {
+          font-size: 10pt;
+          transition: all .3s; }
+          .footer .link .social li a:hover {
+            color: #D32F80; }
+    .footer .link .copyright {
+      font-size: 9pt;
+      line-height: 1.4;
+      font-weight: 300;
+      text-align: center; }
+      .footer .link .copyright a {
+        font-weight: 500;
+        transition: all .3s; }
+        .footer .link .copyright a:hover {
+          color: #D32F80; }
 
 .spotlight {
   min-height: calc(100vh - 4rem);
