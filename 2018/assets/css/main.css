@@ -89,13 +89,17 @@ table {
       font-size: 14pt;
       align-items: flex-end; }
       .sidebar .menu ul li {
-        margin: 10pt 0; }
+        margin: 5pt 0;
+        width: 11rem;
+        position: relative; }
         .sidebar .menu ul li a {
           color: #FFFFFF;
           background-color: #D32F80;
-          padding: 3pt 7pt;
-          text-align: center;
-          text-decoration: none; }
+          padding: 7pt;
+          text-decoration: none;
+          width: calc(100% - 14pt);
+          display: flex;
+          justify-content: flex-end; }
           .sidebar .menu ul li a:hover {
             color: #D32F80;
             background-color: #21252B; }
