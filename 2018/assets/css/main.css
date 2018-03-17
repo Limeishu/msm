@@ -63,14 +63,11 @@ table {
     filter: drop-shadow(0 0 10pt #FFFFFF); }
     @media screen and (max-width: 1200px) {
       .sidebar .logo {
-        display: flex;
-        justify-content: center; } }
+        width: 50%;
+        margin: 0 auto; } }
     .sidebar .logo img {
       width: 100%;
       filter: drop-shadow(0 0 10pt #FFFFFF); }
-      @media screen and (max-width: 1200px) {
-        .sidebar .logo img {
-          width: 50%; } }
       .sidebar .logo img:before {
         padding-top: 100%;
         content: ""; }

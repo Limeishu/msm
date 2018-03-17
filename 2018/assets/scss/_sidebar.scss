@@ -9,17 +9,14 @@
   grid-area: sidebar;
   .logo {
     @media screen and (max-width: 1200px) {
-      display: flex;
-      justify-content: center;
+      width: 50%;
+      margin: 0 auto;
     }
     width: 100%;
     filter: drop-shadow(0 0 10pt $white);
     img {
       width: 100%;
       filter: drop-shadow(0 0 10pt $white);
-      @media screen and (max-width: 1200px) {
-        width: 50%;
-      }
       &:before {
         padding-top: 100%;
         content: "";
