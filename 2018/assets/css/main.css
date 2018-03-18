@@ -242,6 +242,12 @@ table {
         @media screen and (max-width: 1200px) {
           .spotlight .container > p > span {
             margin-right: 1rem; } }
+    .spotlight .container a {
+      color: inherit;
+      font-weight: 600;
+      transition: all .3s; }
+      .spotlight .container a:hover {
+        color: #D32F80; }
 
 #app {
   display: grid;

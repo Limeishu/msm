@@ -70,5 +70,13 @@
         }
       }
     }
+    a {
+      color: inherit;
+      font-weight: 600;
+      transition: all .3s;
+      &:hover {
+        color: $tone;
+      }
+    }
   }
 }
