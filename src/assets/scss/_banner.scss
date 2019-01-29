@@ -1,4 +1,15 @@
 .banner {
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  &.has-bg {
+    @include background;
+  }
+
+  &.column-bottom {
+    flex-direction: column-reverse;
+    > div {
+      display: flex;
+    }
+  }
 }

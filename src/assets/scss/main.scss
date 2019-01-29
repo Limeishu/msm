@@ -2,5 +2,13 @@
 @import 'color';
 @import 'font';
 
+@import 'mixin';
+
 @import 'banner';
 @import 'counter';
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $tone;
+}
