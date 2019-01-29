@@ -28,9 +28,21 @@
   margin: 5px 10px;
   border-radius: 3px;
 
+  @media screen and (max-width: 320px) {
+    margin: 5px 5px;
+  }
+
   &>p {
     font-size: 48pt;
     line-height: 1;
+
+    @media screen and (max-width: 600px) {
+      font-size: 28pt;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-size: 24pt;
+    }
   }
 
   &>span {

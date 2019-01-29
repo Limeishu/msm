@@ -2,13 +2,25 @@
   width: 100%;
   min-height: 100vh;
   display: flex;
+
   &.has-bg {
-    @include background;
+    @include background-fixed;
   }
 
   &.column-bottom {
     flex-direction: column-reverse;
-    > div {
+
+    >div {
+      display: flex;
+    }
+  }
+
+  &.column-center {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    >div {
       display: flex;
     }
   }
