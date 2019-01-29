@@ -8,6 +8,6 @@ Vue.config.devtools = true
 const app = new Vue({
   router,
   ...App
-})
+}).$mount('#app')
 
 export { app }

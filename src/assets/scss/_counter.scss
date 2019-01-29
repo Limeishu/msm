@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+.counter {
+  &-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  &,
+  &>p,
+  &>span {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 5px 10px;
+  background-color: $white;
+  border-radius: 3px;
+
+  &>p {
+    font-size: 48pt;
+    line-height: 1;
+  }
+
+  &>span {
+    top: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    font-size: 14pt;
+    margin: 5px 0;
+  }
+
+  &.split {
+    font-size: 20pt;
+  }
+}
