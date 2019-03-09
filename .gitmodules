@@ -1,0 +1,6 @@
+[submodule "2017"]
+	path = 2017
+	url = git@github.com:Limeishu/msm.git
+[submodule "2018"]
+	path = 2018
+	url = git@github.com:Limeishu/msm.git
