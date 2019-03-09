@@ -1,0 +1,47 @@
+@import 'reset';
+@import 'color';
+@import 'font';
+@import 'sidebar';
+@import 'footer';
+@import 'spotlight';
+#app {
+  display: grid;
+  grid-template-areas: "sidebar main footer";
+  grid-template-columns: 240pt 1fr 250pt;
+  grid-template-rows: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  background-image: url('../images/BG.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  &:before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba($black, 0) 70%, rgba($black, .7));
+  }
+  @media screen and (max-width: 1200px) {
+    grid-template-areas: "sidebar" "main" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+  }
+}
+
+.main {
+  position: relative;
+  width: calc(100% - 490pt);
+  min-height: 100vh;    
+  grid-area: main;
+  margin-left: 240pt;
+  margin-right: 250pt;
+  @media screen and (max-width: 1200px) {
+    margin: 0;
+    width: 100%;
+  }
+}
