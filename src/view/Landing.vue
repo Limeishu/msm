@@ -2,7 +2,7 @@
   <div>
     <div
       class="banner has-bg column-center"
-      :style="{'background-image': 'url(https://image.limeishu.org.tw/images/museum/cca200001-fa-oilms0110.jpg)'}"
+      :style="{'background-image': 'url(/2019/static/img/bg1-horizon.jpg)'}"
     >
       <div class="landing-header">
         <div class="logo">
