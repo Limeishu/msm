@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300');
 
 .counter {
   &-container {
@@ -7,7 +7,8 @@
     justify-content: center;
     align-items: center;
     padding: 10pt 0 20pt 0;
-    filter: drop-shadow(0 0 10px $white);
+    filter: drop-shadow(0 0 5px $white);
+
     ::selection {
       background: transparent;
     }
@@ -20,7 +21,12 @@
     color: $white;
   }
 
+  &>p {
+    font-weight: 100;
+  }
+
   filter: drop-shadow(0 0 3px $black);
+  text-shadow: 0 0 10px rgba($black, .5);
   position: relative;
   display: flex;
   flex-direction: column;
