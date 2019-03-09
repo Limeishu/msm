@@ -1,6 +1,6 @@
 node {
 	def app
-	def project_name = 'msm/2019'
+	def project_name = 'msm'
 
 	stage('Clone repo'){
 		checkout scm
