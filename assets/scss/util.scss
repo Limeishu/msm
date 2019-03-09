@@ -1,0 +1,63 @@
+//font-size
+$title-xl: 2.5em;
+$title-l: 2em;
+$title-m: 1.2em;
+$title-s: .8em;
+$subtitle: 1.2em;
+$subtitle-m: 1em;
+$subtitle-s: .5em;
+$content-xl: 1em;
+$content-l: .8em;
+$content-m: .5em;
+$content-s: .2em;
+$footnote: .5em;
+//color-config
+//pure
+$white: rgba(255, 255, 255, 1);
+$black: rgb(13, 14, 15);
+$light-gray: rgba($white, 70%);
+$gray: rgb(28, 28, 28);
+$blue: rgba(0, 82, 112, 1);
+$dark-blue: rgb(0, 54, 74);
+$green: rgba(14, 163, 163, 1);
+$dark-green: rgba(67, 116, 20, 1);
+$yellow: rgb(255, 213, 72);
+$dark-yellow: rgb(221, 174, 16);
+$orange: rgba(221, 141, 71, 1);
+$pink: #E1147F;
+$red: rgb(244, 62, 62);
+$light-gray: #cecece;
+//alpha
+$gray-alpha: rgba(29, 29, 29, .5);
+$orange-alpha: rgba(221, 141, 71, .75);
+//mixin
+//background
+@mixin backgroundConfig {
+	background-attachment: local;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+//logo
+@mixin logoConfig {
+	width: 20em;
+	height: 20em;
+	border-radius: 100%;
+	display: block;
+	margin: .5em;
+}
+
+//icon
+@mixin iconConfig {
+	font-family: 'FontAwesome';
+	color: $white;
+	font-size: 1em;
+}
+
+@mixin flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
