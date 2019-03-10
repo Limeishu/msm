@@ -8,10 +8,10 @@
       :class="{ 'toggle': toggle }"
     >
       <div class="main-logo">
-        <img src="@/assets/images/logo.svg" alt="">
+        <img src="@/assets/images/logo.png" alt="">
       </div>
       <div class="active-logo">
-        <img src="@/assets/images/active-logo.svg" alt="">
+        <img src="@/assets/images/active-logo.png" alt="">
         <div class="slogen">
           <span class="serif">一場追尋歷史遺跡，重塑時代記憶的展覽</span>
         </div>

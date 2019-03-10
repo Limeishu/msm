@@ -1,6 +1,8 @@
 #header {
   position: fixed;
   z-index: 10000;
+  top: 0;
+  left: 0;
 
   .spotlight {
     margin: 0 200px;
@@ -25,7 +27,6 @@
     .active-logo,
     .active-date {
       transition: all ease-in-out .3s;
-      filter: drop-shadow(0 0 10px $black);
     }
 
     .main-logo {
@@ -81,6 +82,7 @@
       color: $white;
       font-weight: 700;
       opacity: .8;
+      text-shadow: 0 0 10px $black;
 
       .year {
         position: absolute;
@@ -90,7 +92,7 @@
       }
 
       .date {
-        font-size: 96px;
+        font-size: 84px;
         white-space: nowrap;
       }
     }

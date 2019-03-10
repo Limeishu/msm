@@ -26,9 +26,9 @@
 
   .container {
     display: flex;
-    margin: 400px 0;
+    margin: 200px 0;
     width: 100%;
-    height: calc(100% - 400px);
+    height: calc(100% - 200px * 2);
     flex-direction: row-reverse;
 
     h1 {
