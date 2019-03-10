@@ -1,25 +1,41 @@
 <template>
   <div id="app">
-    <Header :toggle="isToggleHeader" v-if="$route.meta.type === 'main'" />
-    <transition :name="transitionMode">
+    <Header
+      v-if="$route.meta.type === 'main'"
+      :toggle="isToggleHeader"
+      :isMobile="isMobile"
+    />
+    <transition :name="transitionMode" v-if="!isMobile">
       <keep-alive>
         <router-view class="main-view" />
       </keep-alive>
     </transition>
+    <div class="mobile-page-group" v-if="isMobile">
+      <Home />
+      <Active />
+      <Exhibition />
+    </div>
   </div>
 </template>
 
 <script>
+import Home from '@/view/Home'
+import Active from '@/view/Active'
+import Exhibition from '@/view/Exhibition'
 import Header from '@/components/Header'
 
 export default {
   components: {
-    Header
+    Header,
+    Home,
+    Active,
+    Exhibition
   },
   data () {
     return {
       transitionMode: 'slide-left',
       isToggleHeader: false,
+      isMobile: false,
       routerList: [],
       routerAt: 0,
       stop: false
@@ -29,12 +45,18 @@ export default {
     this.routerList = this.$router.options.routes.filter(item => item.meta && item.meta.type === 'main').sort((a, b) => (a.meta.index > b.meta.index)).map(ele => (ele.name))
     this.routerAt = this.routerList.indexOf(this.$route.name)
     this.toggleHeader()
-    if (this.$route.meta.type === 'main') {
+    this.toggleMobile()
+    if (this.$route.meta.type === 'main' && !this.isMobile) {
       window.addEventListener('mousewheel', this.scrollHandler, false)
       window.addEventListener('DOMMouseScroll', this.scrollHandler, false)
+      window.addEventListener('resize', this.toggleMobile, false)
     }
   },
   methods: {
+    toggleMobile () {
+      if (document.documentElement.clientWidth <= 900 || /iPad|iPhone|Android/i.test(navigator.userAgent)) this.isMobile = true
+      else this.isMobile = false
+    },
     toggleHeader () {
       if (this.$route.name !== 'Home') this.isToggleHeader = true
       else this.isToggleHeader = false

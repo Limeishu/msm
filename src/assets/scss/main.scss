@@ -51,3 +51,9 @@ body {
   transition-duration: .5s;
   transition-timing-function: cubic-bezier(.55, 0, .1, 1);
 }
+
+.mobile-page-group {
+  #home {
+    display: none;
+  }
+}

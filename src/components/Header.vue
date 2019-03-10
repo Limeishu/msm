@@ -2,6 +2,7 @@
   <div
     id="header"
     class="spotlight-container banner has-bg column-center"
+    :class="{ 'is-mobile': isMobile }"
   >
     <div
       class="spotlight"
@@ -51,6 +52,10 @@
 export default {
   props: {
     toggle: {
+      default: false,
+      type: Boolean
+    },
+    isMobile: {
       default: false,
       type: Boolean
     }
