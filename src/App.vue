@@ -21,7 +21,8 @@ export default {
       transitionMode: 'slide-left',
       isToggleHeader: false,
       routerList: [],
-      routerAt: 0
+      routerAt: 0,
+      stop: false
     }
   },
   mounted () {
@@ -41,23 +42,23 @@ export default {
     scrollHandler (event) {
       event = window.event || event
       event.preventDefault()
-      window.removeEventListener('mousewheel', this.scrollHandler)
-      window.removeEventListener('DOMMouseScroll', this.scrollHandler)
 
-      let delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)))
+      if (!this.stop) {
+        this.stop = true
+        let delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)))
 
-      if (delta < 0) {
-        this.routerAt = this.routerAt === this.routerList.length ? this.routerAt : this.routerAt + 1
-      } else {
-        this.routerAt = this.routerAt === 0 ? this.routerAt : this.routerAt - 1
+        if (delta < 0) {
+          this.routerAt = this.routerAt === this.routerList.length ? this.routerAt : this.routerAt + 1
+        } else {
+          this.routerAt = this.routerAt === 0 ? this.routerAt : this.routerAt - 1
+        }
+
+        this.$router.push({name: this.routerList[this.routerAt]})
+
+        setTimeout(() => {
+          this.stop = false
+        }, 1000)
       }
-
-      this.$router.push({name: this.routerList[this.routerAt]})
-
-      setTimeout(() => {
-        window.addEventListener('mousewheel', this.scrollHandler, false)
-        window.addEventListener('DOMMouseScroll', this.scrollHandler, false)
-      }, 1000)
     }
   },
   watch: {
