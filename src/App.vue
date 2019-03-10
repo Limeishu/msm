@@ -38,6 +38,9 @@ export default {
     },
     scrollHandler (event) {
       event = window.event || event
+      event.preventDefault()
+      window.removeEventListener('mousewheel', this.scrollHandler)
+      window.removeEventListener('DOMMouseScroll', this.scrollHandler)
 
       let delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)))
 
@@ -49,7 +52,10 @@ export default {
 
       this.$router.push({name: this.routerList[this.routerAt]})
 
-      event.preventDefault()
+      setTimeout(() => {
+        window.addEventListener('mousewheel', this.scrollHandler, false)
+        window.addEventListener('DOMMouseScroll', this.scrollHandler, false)
+      }, 1000)
     }
   },
   watch: {

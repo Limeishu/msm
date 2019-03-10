@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/view/Home'
 import Active from '@/view/Active'
+import Exhibition from '@/view/Exhibition'
 import Landing from '@/view/Landing'
 
 Vue.use(Router)
@@ -27,6 +28,16 @@ const router = new Router({
         label: '活動',
         type: 'main',
         index: 1
+      }
+    },
+    {
+      path: '/exhibition',
+      name: 'Exhibition',
+      component: Exhibition,
+      meta: {
+        label: '活動',
+        type: 'main',
+        index: 2
       }
     },
     {
