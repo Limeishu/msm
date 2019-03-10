@@ -30,6 +30,10 @@
 
       .active-date {
         transform: translateX(36px);
+
+        @media screen and (max-width: 1366px) {
+          transform: translateX(26px);
+        }
       }
 
       .active-logo {
@@ -128,11 +132,19 @@
         font-size: 36px;
         transform: rotate(-90deg) translate(-100%, -100%);
         transform-origin: left top;
+
+        @media screen and (max-width: 1366px) {
+          font-size: 26px;
+        }
       }
 
       .date {
         font-size: 84px;
         white-space: nowrap;
+
+        @media screen and (max-width: 1366px) {
+          font-size: 72px;
+        }
       }
 
       .footer {
@@ -144,6 +156,11 @@
 
         @media screen and (max-width: 1680px) {
           margin-top: 0;
+        }
+
+        @media screen and (max-width: 1366px) {
+          width: 420px;
+          margin-left: -26px;
         }
 
         &-logo {
