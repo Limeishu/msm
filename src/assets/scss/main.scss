@@ -5,10 +5,14 @@
 @import 'mixin';
 
 @import 'banner';
+@import 'spotlight';
+
 @import 'counter';
+@import 'header';
+@import 'active';
 
 #app {
   width: 100%;
   min-height: 100vh;
-  background-color: $tone;
+  background-color: $paper;
 }

@@ -1,0 +1,73 @@
+#header {
+  position: relative;
+
+  &.toggle {
+    .spotlight {
+      align-items: flex-start;
+    }
+  }
+
+  .spotlight {
+    margin: 0 400px;
+    width: calc(100% - 400px * 2);
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    transition: all ease-in-out .3s;
+
+    .main-logo {
+      position: absolute;
+      margin-top: -120px;
+      opacity: .8;
+
+      img {
+        height: 120px;
+        filter: drop-shadow(0 0 10px $black);
+      }
+    }
+
+    .active-logo {
+      height: 400px;
+      width: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      filter: drop-shadow(0 0 15px $black);
+
+      .slogen {
+        position: absolute;
+        color: $white;
+        font-size: 20px;
+        writing-mode: vertical-lr;
+        border: solid $white;
+        border-width: 0 1px 0 1px;
+        box-sizing: border-box;
+        margin-right: 6px;
+        transform: scaleX(0.8);
+        font-weight: 500;
+        text-shadow: 0 0 10px $black;
+      }
+    }
+
+    .active-date {
+      position: absolute;
+      margin-top: 420px;
+      color: $white;
+      font-weight: 700;
+      text-shadow: 0 0 15px $black;
+      opacity: .8;
+
+      .year {
+        position: absolute;
+        font-size: 36px;
+        transform: rotate(-90deg) translate(-100%, -100%);
+        transform-origin: left top;
+      }
+
+      .date {
+        font-size: 96px;
+      }
+    }
+  }
+}
