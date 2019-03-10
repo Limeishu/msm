@@ -44,7 +44,7 @@ export default {
 
       let delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)))
 
-      if (delta > 0) {
+      if (delta < 0) {
         this.routerAt = this.routerAt === this.routerList.length ? this.routerAt : this.routerAt + 1
       } else {
         this.routerAt = this.routerAt === 0 ? this.routerAt : this.routerAt - 1
