@@ -45,17 +45,23 @@ export default {
     this.routerList = this.$router.options.routes.filter(item => item.meta && item.meta.type === 'main').sort((a, b) => (a.meta.index > b.meta.index)).map(ele => (ele.name))
     this.routerAt = this.routerList.indexOf(this.$route.name)
     this.toggleHeader()
-    this.toggleMobile()
-    if (this.$route.meta.type === 'main' && !this.isMobile) {
-      window.addEventListener('mousewheel', this.scrollHandler, false)
-      window.addEventListener('DOMMouseScroll', this.scrollHandler, false)
-      window.addEventListener('resize', this.toggleMobile, false)
-    }
+    this.toggleDevice()
+    window.addEventListener('resize', this.toggleDevice, false)
+
   },
   methods: {
-    toggleMobile () {
+    toggleDevice () {
       if (document.documentElement.clientWidth <= 900 || /iPad|iPhone|Android|Mobile/i.test(navigator.userAgent)) this.isMobile = true
       else this.isMobile = false
+
+      if (this.$route.meta.type === 'main' && !this.isMobile) {
+        window.addEventListener('mousewheel', this.scrollHandler, false)
+        window.addEventListener('DOMMouseScroll', this.scrollHandler, false)
+      } else {
+        this.$router.push({ name: 'Home' })
+        window.removeEventListener('mousewheel', this.scrollHandler)
+        window.removeEventListener('DOMMouseScroll', this.scrollHandler)
+      }
     },
     toggleHeader () {
       if (this.$route.name !== 'Home') this.isToggleHeader = true
