@@ -10,10 +10,6 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      redirect: '/2019/landing'
-    },
-    {
-      path: '/',
       name: 'Home',
       component: Home,
       meta: {
