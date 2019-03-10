@@ -47,6 +47,11 @@
       height: calc(100% - 3rem * 2);
     }
 
+    @media screen and (max-width: 1024px) {
+      margin: 2rem 0;
+      height: calc(100% - 2rem * 2);
+    }
+
     h1 {
       writing-mode: vertical-rl;
       font-weight: 900;
@@ -58,6 +63,11 @@
         font-size: 36px;
         margin-left: 1rem;
       }
+
+      @media screen and (max-width: 1024px) {
+        font-size: 32px;
+        margin-left: .5rem;
+      }
     }
 
     .content {
@@ -67,6 +77,10 @@
       color: $content;
       margin-left: 2rem;
 
+      @media screen and (max-width: 1366px) {
+        margin-left: 1rem;
+      }
+
       @media screen and (max-width: 1280px) {
         margin-left: .5rem;
       }
@@ -74,9 +88,8 @@
       h2 {
         font-weight: 700;
         margin: 0 5px;
-        border: solid $content;
-        box-sizing: border-box;
-        border-width: 0 1px 0 1px;
+        text-decoration: underline overline;
+        text-decoration-color: rgba($content, .5);
         font-size: 32px;
 
         @media screen and (max-width: 1440px) {
@@ -85,6 +98,10 @@
 
         @media screen and (max-width: 1280px) {
           font-size: 24px;
+        }
+
+        @media screen and (max-width: 1112px) {
+          font-size: 20px;
         }
       }
 
@@ -99,6 +116,10 @@
 
         @media screen and (max-width: 1280px) {
           font-size: 14px;
+        }
+
+        @media screen and (max-width: 1112px) {
+          font-size: 12px;
         }
       }
     }
