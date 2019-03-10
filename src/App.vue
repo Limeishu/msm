@@ -5,12 +5,12 @@
       :toggle="isToggleHeader"
       :isMobile="isMobile"
     />
-    <transition :name="transitionMode" v-if="!isMobile">
+    <transition :name="transitionMode" v-if="!isMobile || $route.meta.type === 'self'">
       <keep-alive>
         <router-view class="main-view" />
       </keep-alive>
     </transition>
-    <div class="mobile-page-group" v-if="isMobile">
+    <div class="mobile-page-group" v-if="isMobile && $route.meta.type === 'main'">
       <Home />
       <Active />
       <Exhibition />
