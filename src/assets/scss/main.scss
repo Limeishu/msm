@@ -14,6 +14,10 @@
 body {
   overflow: -moz-hidden-unscrollable;
   height: 100%;
+
+  @media screen and (max-width: 900px) {
+    overflow: initial;
+  }
 }
 
 #app {
