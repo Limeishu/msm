@@ -9,6 +9,7 @@ node {
   stage('Init Submodule'){
     sh "git submodule init"
     sh "git submodule update"
+    sh "cd $WORKSPACE/dist && git submodule init && git submodule update"
   }
 
 	stage('Build'){
