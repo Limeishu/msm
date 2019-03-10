@@ -34,6 +34,12 @@
       margin: 0 3rem 6rem 3rem;
     }
 
+    @media screen and (max-width: 650px) {
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+    }
+
     &.toggle {
 
       .main-logo,
@@ -72,6 +78,7 @@
       position: absolute;
       margin-top: -120px;
       opacity: .8;
+      z-index: 1;
 
       @media screen and (max-width: 1680px) {
         margin-left: calc(100% - 300px);
@@ -88,6 +95,15 @@
         margin-top: -120px;
       }
 
+      @media screen and (max-width: 650px) {
+        position: relative;
+        margin: 0;
+        margin-top: 1rem;
+        margin-bottom: -2rem;
+        opacity: 1;
+        filter: drop-shadow(0 0 5px $black);
+      }
+
       img {
         height: 120px;
 
@@ -102,6 +118,10 @@
         @media screen and (max-width: 900px) {
           height: 120px;
         }
+
+        @media screen and (max-width: 650px) {
+          height: 80px;
+        }
       }
     }
 
@@ -113,6 +133,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 0;
 
       @media screen and (max-width: 1680px) {
         margin-left: calc(100% - 300px);
@@ -130,6 +151,17 @@
         margin-left: calc(100% - 400px);
         height: 400px;
         width: 400px;
+      }
+
+      @media screen and (max-width: 650px) {
+        margin: 0;
+        height: 375px;
+        width: 375px;
+      }
+
+      @media screen and (max-width: 375px) {
+        height: 350px;
+        width: 350px;
       }
 
       img {
@@ -169,6 +201,11 @@
           left: calc(50% - (20px + 2px + 14px) / 2);
           font-size: 20px;
         }
+
+        @media screen and (max-width: 900px) {
+          left: calc(50% - (16px + 2px + 14px) / 2);
+          font-size: 16px;
+        }
       }
     }
 
@@ -197,6 +234,14 @@
         margin-left: calc(100% - 250px);
       }
 
+      @media screen and (max-width: 650px) {
+        position: relative;
+        margin: 0;
+        margin-top: -2rem;
+        margin-bottom: 1rem;
+        opacity: 1;
+      }
+
       .year {
         position: absolute;
         font-size: 36px;
@@ -216,6 +261,10 @@
         @media screen and (max-width: 1440px) {
           line-height: inherit;
           font-size: 72px;
+        }
+
+        @media screen and (max-width: 375px) {
+          font-size: 64px;
         }
 
         @supports (-webkit-backdrop-filter: blur(0)) {
@@ -241,6 +290,11 @@
 
         @media screen and (max-width: 900px) {
           text-shadow: inherit;
+        }
+
+        @media screen and (max-width: 650px) {
+          width: 100%;
+          margin: 0;
         }
 
         &-logo {

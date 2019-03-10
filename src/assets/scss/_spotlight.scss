@@ -6,6 +6,10 @@
     height: 100%;
     position: relative;
 
+    @media screen and (max-width: 650px) {
+      height: auto;
+    }
+
     &.page {
       width: calc(100% - 600px - 10rem * 2);
       margin-left: 600px;
@@ -16,6 +20,12 @@
         width: calc(100% - 300px - 3rem * 2);
         margin-left: 300px;
         padding: 0 3rem;
+      }
+
+      @media screen and (max-width: 650px) {
+        width: auto;
+        margin: 0;
+        padding: 1rem;
       }
 
       >.spotlight {
@@ -52,6 +62,10 @@
       height: calc(100% - 2rem * 2);
     }
 
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+    }
+
     h1 {
       writing-mode: vertical-rl;
       font-weight: 900;
@@ -68,6 +82,10 @@
         font-size: 32px;
         margin-left: .5rem;
       }
+
+      @media screen and (max-width: 650px) {
+        writing-mode: horizontal-tb;
+      }
     }
 
     .content {
@@ -83,6 +101,10 @@
 
       @media screen and (max-width: 1280px) {
         margin-left: .5rem;
+      }
+
+      @media screen and (max-width: 650px) {
+        writing-mode: horizontal-tb;
       }
 
       h2 {
@@ -102,6 +124,8 @@
 
         @media screen and (max-width: 1112px) {
           font-size: 20px;
+          margin: 5px 0;
+          text-decoration: none;
         }
       }
 
