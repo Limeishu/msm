@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header :toggle="isToggleHeader" />
+    <Header :toggle="isToggleHeader" v-if="$route.meta.type === 'main'" />
     <transition :name="transitionMode">
       <keep-alive>
         <router-view class="main-view" />
@@ -28,8 +28,10 @@ export default {
     this.routerList = this.$router.options.routes.filter(item => item.meta && item.meta.type === 'main').sort((a, b) => (a.meta.index > b.meta.index)).map(ele => (ele.name))
     this.routerAt = this.routerList.indexOf(this.$route.name)
     this.toggleHeader()
-    window.addEventListener('mousewheel', this.scrollHandler, false)
-    window.addEventListener('DOMMouseScroll', this.scrollHandler, false)
+    if (this.$route.meta.type === 'main') {
+      window.addEventListener('mousewheel', this.scrollHandler, false)
+      window.addEventListener('DOMMouseScroll', this.scrollHandler, false)
+    }
   },
   methods: {
     toggleHeader () {
