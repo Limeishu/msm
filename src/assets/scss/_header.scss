@@ -251,6 +251,10 @@
         @media screen and (max-width: 1440px) {
           font-size: 26px;
         }
+
+        @media screen and (max-width: 650px) {
+          display: none;
+        }
       }
 
       .date {
@@ -261,6 +265,10 @@
         @media screen and (max-width: 1440px) {
           line-height: inherit;
           font-size: 72px;
+        }
+
+        @media screen and (max-width: 650px) {
+          font-size: 64px;
         }
 
         @media screen and (max-width: 375px) {

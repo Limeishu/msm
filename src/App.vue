@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     toggleMobile () {
-      if (document.documentElement.clientWidth <= 900 || /iPad|iPhone|Android/i.test(navigator.userAgent)) this.isMobile = true
+      if (document.documentElement.clientWidth <= 900 || /iPad|iPhone|Android|Mobile/i.test(navigator.userAgent)) this.isMobile = true
       else this.isMobile = false
     },
     toggleHeader () {
