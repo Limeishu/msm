@@ -5,7 +5,7 @@
   left: 0;
 
   .spotlight {
-    margin: 0 200px;
+    margin: 0 200px 200px 200px;
     width: calc(100% - 200px * 2);
     flex-direction: column;
     position: relative;
@@ -16,6 +16,10 @@
         right: calc(100% - 400px);
         left: 0;
         margin-left: 0;
+      }
+
+      .active-date {
+        transform: translateX(36px);
       }
 
       .active-logo {
@@ -94,6 +98,51 @@
       .date {
         font-size: 84px;
         white-space: nowrap;
+      }
+
+      .footer {
+        font-size: 10px;
+        width: 480px;
+        margin-left: -36px;
+        margin-top: 1rem;
+        text-shadow: none;
+
+        &-logo {
+          img {
+            height: 65px;
+          }
+        }
+
+        .copyright {
+          margin-top: 1rem;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+
+          .content {
+            margin-left: .5rem;
+
+            p {
+              display: inline-block;
+
+              a {
+                color: inherit;
+              }
+            }
+          }
+        }
+
+        >p {
+          display: inline-flex;
+
+          span {
+            width: calc(100% - 40px);
+
+            &.property {
+              width: 60px;
+            }
+          }
+        }
       }
     }
   }

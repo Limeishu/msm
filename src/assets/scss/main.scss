@@ -26,6 +26,11 @@ body {
   display: none;
 }
 
+::selection {
+  background-color: $tone;
+  color: $white;
+}
+
 .slide-left-enter,
 .slide-right-leave-active {
   position: absolute;
