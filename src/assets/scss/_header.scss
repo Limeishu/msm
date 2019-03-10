@@ -58,11 +58,19 @@
         margin-top: -100px;
       }
 
+      @media screen and (max-width: 1280px) {
+        margin-top: -80px;
+      }
+
       img {
         height: 120px;
 
         @media screen and (max-width: 1680px) {
           height: 100px;
+        }
+
+        @media screen and (max-width: 1280px) {
+          height: 80px;
         }
       }
     }
@@ -80,6 +88,12 @@
         margin-left: calc(100% - 300px);
         height: 300px;
         width: 300px;
+      }
+
+      @media screen and (max-width: 1280px) {
+        margin-left: calc(100% - 250px);
+        height: 250px;
+        width: 250px;
       }
 
       img {
@@ -109,6 +123,11 @@
           margin-right: 10px;
           font-size: 14px;
         }
+
+        @media screen and (max-width: 1280px) {
+          left: calc(50% - (12px + 2px + 10px) / 2);
+          font-size: 12px;
+        }
       }
     }
 
@@ -125,6 +144,11 @@
       @media screen and (max-width: 1680px) {
         margin-top: 310px;
         margin-left: calc(100% - 300px);
+      }
+
+      @media screen and (max-width: 1280px) {
+        margin-top: 260px;
+        margin-left: calc(100% - 250px);
       }
 
       .year {
