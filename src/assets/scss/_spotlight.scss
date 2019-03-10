@@ -42,6 +42,11 @@
       height: calc(100% - 9rem * 2);
     }
 
+    @media screen and (max-width: 1440px) {
+      margin: 3rem 0;
+      height: calc(100% - 3rem * 2);
+    }
+
     h1 {
       writing-mode: vertical-rl;
       font-weight: 900;
@@ -64,12 +69,20 @@
         box-sizing: border-box;
         border-width: 0 1px 0 1px;
         font-size: 32px;
+
+        @media screen and (max-width: 1440px) {
+          font-size: 26px;
+        }
       }
 
       ul {
         display: inline-flex;
         flex-direction: column;
         font-size: 20px;
+
+        @media screen and (max-width: 1440px) {
+          font-size: 15.6px;
+        }
       }
     }
   }

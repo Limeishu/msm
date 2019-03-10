@@ -15,6 +15,10 @@
       width: calc(100% - 3rem * 2);
     }
 
+    @media screen and (max-width: 1440px) {
+      margin: 0 3rem 15rem 3rem;
+    }
+
     &.toggle {
 
       .main-logo,
