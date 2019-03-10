@@ -12,7 +12,7 @@
         <img src="@/assets/images/logo.png" alt="">
       </div>
       <div class="active-logo">
-        <img src="@/assets/images/active-logo.png" alt="">
+        <img src="@/assets/images/active-logo.png" alt="茬苒韶光">
         <div class="slogen">
           <span class="serif">一場追尋歷史遺跡，重塑時代記憶的展覽</span>
         </div>
