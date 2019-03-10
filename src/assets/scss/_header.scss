@@ -99,7 +99,6 @@
         position: relative;
         margin: 0;
         margin-top: 1rem;
-        margin-bottom: -2rem;
         opacity: 1;
         filter: drop-shadow(0 0 5px $black);
       }
@@ -237,7 +236,6 @@
       @media screen and (max-width: 650px) {
         position: relative;
         margin: 0;
-        margin-top: -2rem;
         margin-bottom: 1rem;
         opacity: 1;
       }
