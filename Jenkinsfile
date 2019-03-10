@@ -18,12 +18,12 @@ node {
 		sh "yarn"
 		sh "yarn run build"
 		echo 'Packing files.'
-		sh "zip -r package.zip ."
+		sh "cd ./dist && zip -r package.zip ."
 	}
 
   stage('Push to Remote Server'){
 		echo 'Connecting to the server.'
-		sh "scp -r -P 2047 $WORKSPACE/package.zip www@ssh.limeishu.org.tw:/home/www/webserver/lms-extra/msm"
+		sh "scp -r -P 2047 $WORKSPACE/dist/package.zip www@ssh.limeishu.org.tw:/home/www/webserver/lms-extra/msm"
 	}
 
 	stage('Active Service'){
@@ -39,6 +39,6 @@ node {
 
 	stage('Clean'){
 		echo 'Cleaning old files.'
-		sh "rm -rf package.zip"
+		sh "rm -rf $WORKSPACE/dist/package.zip"
 	}
 }
