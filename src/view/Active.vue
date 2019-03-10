@@ -1,7 +1,7 @@
 <template>
   <div
     class="spotlight-container banner has-bg column-center"
-    :style="{'background-image': 'url(/2019/static/img/bg1-horizon.jpg)'}"
   >
+    <h1>活動</h1>
   </div>
 </template>

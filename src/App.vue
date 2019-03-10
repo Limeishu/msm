@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <Header :class="{ 'toggle': isToggleHeader }" />
-    <transition :name="transistionMode">
+    <Header :toggle="isToggleHeader" />
+    <transition :name="transitionMode">
       <keep-alive>
-        <router-view />
+        <router-view class="main-view" />
       </keep-alive>
     </transition>
   </div>
@@ -19,21 +19,45 @@ export default {
   data () {
     return {
       transitionMode: 'slide-left',
-      isToggleHeader: false
+      isToggleHeader: false,
+      routerList: [],
+      routerAt: 0
     }
   },
   mounted () {
+    this.routerList = this.$router.options.routes.filter(item => item.meta && item.meta.type === 'main').sort((a, b) => (a.meta.index > b.meta.index)).map(ele => (ele.name))
+    this.routerAt = this.routerList.indexOf(this.$route.name)
     this.toggleHeader()
+    window.addEventListener('mousewheel', this.scrollHandler, false)
+    window.addEventListener('DOMMouseScroll', this.scrollHandler, false)
   },
   methods: {
     toggleHeader () {
       if (this.$route.name !== 'Home') this.isToggleHeader = true
       else this.isToggleHeader = false
+    },
+    scrollHandler (event) {
+      event = window.event || event
+
+      let delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)))
+
+      if (delta > 0) {
+        this.routerAt = this.routerAt === this.routerList.length ? this.routerAt : this.routerAt + 1
+      } else {
+        this.routerAt = this.routerAt === 0 ? this.routerAt : this.routerAt - 1
+      }
+
+      this.$router.push({name: this.routerList[this.routerAt]})
+
+      event.preventDefault()
     }
   },
   watch: {
-    $route () {
+    $route (from, to) {
       this.toggleHeader()
+      const toDepth = to.meta.index
+      const fromDepth = from.meta.index
+      this.transitionMode = toDepth < fromDepth ? 'slide-right' : 'slide-left'
     }
   }
 }

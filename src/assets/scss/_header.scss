@@ -1,41 +1,63 @@
 #header {
-  position: relative;
-
-  &.toggle {
-    .spotlight {
-      align-items: flex-start;
-    }
-  }
+  position: fixed;
+  z-index: 10000;
 
   .spotlight {
-    margin: 0 400px;
-    width: calc(100% - 400px * 2);
-    height: 100%;
+    margin: 0 200px;
+    width: calc(100% - 200px * 2);
     flex-direction: column;
-    align-items: flex-end;
     position: relative;
-    transition: all ease-in-out .3s;
+
+    &.toggle {
+      .main-logo,
+      .active-date {
+        right: calc(100% - 400px);
+        left: 0;
+        margin-left: 0;
+      }
+
+      .active-logo {
+        margin-left: 0;
+      }
+    }
+
+    .main-logo,
+    .active-logo,
+    .active-date {
+      transition: all ease-in-out .3s;
+      filter: drop-shadow(0 0 10px $black);
+    }
 
     .main-logo {
+      right: 0;
+      margin-left: calc(100% - 400px);
       position: absolute;
       margin-top: -120px;
       opacity: .8;
 
       img {
         height: 120px;
-        filter: drop-shadow(0 0 10px $black);
       }
     }
 
     .active-logo {
+      position: relative;
+      margin-left: calc(100% - 400px);
       height: 400px;
       width: 400px;
       display: flex;
       justify-content: center;
       align-items: center;
-      filter: drop-shadow(0 0 15px $black);
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
 
       .slogen {
+        height: 100%;
+        top: 0;
+        left: calc(50% - (20px + 2px + 14px) / 2);
         position: absolute;
         color: $white;
         font-size: 20px;
@@ -43,7 +65,8 @@
         border: solid $white;
         border-width: 0 1px 0 1px;
         box-sizing: border-box;
-        margin-right: 6px;
+        margin-right: 14px;
+        text-align: center;
         transform: scaleX(0.8);
         font-weight: 500;
         text-shadow: 0 0 10px $black;
@@ -51,11 +74,12 @@
     }
 
     .active-date {
+      right: 0;
       position: absolute;
       margin-top: 420px;
+      margin-left: calc(100% - 400px);
       color: $white;
       font-weight: 700;
-      text-shadow: 0 0 15px $black;
       opacity: .8;
 
       .year {
@@ -67,6 +91,7 @@
 
       .date {
         font-size: 96px;
+        white-space: nowrap;
       }
     }
   }

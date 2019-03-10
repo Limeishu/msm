@@ -2,9 +2,11 @@
   <div
     id="header"
     class="spotlight-container banner has-bg column-center"
-    :style="{'background-image': 'url(/2019/static/img/bg1-horizon.jpg)'}"
   >
-    <div class="spotlight">
+    <div
+      class="spotlight"
+      :class="{ 'toggle': toggle }"
+    >
       <div class="main-logo">
         <img src="@/assets/images/logo.svg" alt="">
       </div>
@@ -21,3 +23,14 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    toggle: {
+      default: false,
+      type: Boolean
+    }
+  }
+}
+</script>
