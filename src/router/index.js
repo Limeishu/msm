@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/view/Home'
+import Active from '@/view/Active'
+import Exhibition from '@/view/Exhibition'
 import Landing from '@/view/Landing'
 
 Vue.use(Router)
@@ -10,14 +12,32 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      redirect: '/2019/landing'
-    },
-    {
-      path: '/',
       name: 'Home',
       component: Home,
       meta: {
-        label: '首頁'
+        label: '首頁',
+        type: 'main',
+        index: 0
+      }
+    },
+    {
+      path: '/active',
+      name: 'Active',
+      component: Active,
+      meta: {
+        label: '活動',
+        type: 'main',
+        index: 1
+      }
+    },
+    {
+      path: '/exhibition',
+      name: 'Exhibition',
+      component: Exhibition,
+      meta: {
+        label: '活動',
+        type: 'main',
+        index: 2
       }
     },
     {
@@ -25,13 +45,26 @@ const router = new Router({
       name: 'Landing',
       component: Landing,
       meta: {
-        label: 'Landing'
+        label: 'Landing',
+        type: 'self'
       }
     }
   ].map(routeRule => {
     routeRule.path = `/2019${routeRule.path}`
     return routeRule
-  })
+  }),
+  scrollBehavior (to, from) {
+    if (to.hash) {
+      return {
+        selector: to.hash
+      }
+    } else if (!((from.name === 'Agenda' && to.name === 'AgendaPopup') || (from.name === 'AgendaPopup' && to.name === 'Agenda'))) {
+      return {
+        x: 0,
+        y: 0
+      }
+    }
+  }
 })
 
 export default router

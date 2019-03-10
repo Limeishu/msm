@@ -5,10 +5,55 @@
 @import 'mixin';
 
 @import 'banner';
+@import 'spotlight';
+
 @import 'counter';
+@import 'header';
+@import 'active';
+
+body {
+  overflow: -moz-hidden-unscrollable;
+  height: 100%;
+}
 
 #app {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  background-color: $paper;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
   background-color: $tone;
+  color: $white;
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(-50%);
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(50%);
+}
+
+.main-view {
+  height: 100vh;
+  transition-property: transform,opacity;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(.55, 0, .1, 1);
+}
+
+.mobile-page-group {
+  #home {
+    display: none;
+  }
 }

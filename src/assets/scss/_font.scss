@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC|Noto+Serif+TC:400,500,700,900');
 
 h1,
 h2,
@@ -15,4 +15,8 @@ span {
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
+}
+
+.serif {
+  font-family: 'Noto Serif TC', serif;
 }
