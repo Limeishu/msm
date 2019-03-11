@@ -12,10 +12,10 @@
         >
           <h2 class="serif">{{ active.title }}</h2>
           <ul>
-            <li><p>講師 : {{ active.speaker }}</p></li>
-            <li><p>時間 : {{ active.time }}</p></li>
-            <li><p>地點 : {{ active.place }}</p></li>
-            <li><p>備註 : {{ active.note }}</p></li>
+            <li v-if="active.speaker"><p>講師<span>{{ active.speaker }}</span></p></li>
+            <li v-if="active.time"><p>時間<span>{{ active.time }}</span></p></li>
+            <li v-if="active.place"><p>地點<span>{{ active.place }}</span></p></li>
+            <li v-if="active.note"><p>備註<span>{{ active.note }}</span></p></li>
           </ul>
         </div>
       </div>

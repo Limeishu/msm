@@ -13,6 +13,7 @@
     </transition>
     <div class="mobile-page-group" v-if="isMobile && $route.meta.type === 'main'">
       <Home />
+      <Intro />
       <Active />
       <Exhibition />
     </div>
@@ -22,6 +23,7 @@
 <script>
 import Home from '@/view/Home'
 import Active from '@/view/Active'
+import Intro from '@/view/Intro'
 import Exhibition from '@/view/Exhibition'
 import Header from '@/components/Header'
 import SlideDown from '@/components/SlideDown'
@@ -31,6 +33,7 @@ export default {
     Header,
     Home,
     Active,
+    Intro,
     Exhibition,
     SlideDown
   },

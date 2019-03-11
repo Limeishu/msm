@@ -12,8 +12,10 @@
         >
           <h2 class="serif">{{ exhibition.title }}</h2>
           <ul>
-            <li><p>{{ exhibition.subtitle }}</p></li>
-            <li><p>展點 : {{ exhibition.place }}</p></li>
+            <li v-if="exhibition.subtitle"><p class="bold subtitle">{{ exhibition.subtitle }}</p></li>
+            <li v-if="exhibition.place"><p>展點位置<span>{{ exhibition.place }}</span></p></li>
+            <li v-if="exhibition.description"><p>展覽介紹 <span>{{ exhibition.description }}</span></p></li>
+            <li v-if="exhibition.info"><p>展點資訊 <span>{{ exhibition.info }}</span></p></li>
           </ul>
         </div>
       </div>
