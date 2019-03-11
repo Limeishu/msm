@@ -20,9 +20,9 @@
         <div class="content">
           <h2 class="serif">這邊提供歷年梅樹月官網或手冊，供大家回味</h2>
           <ul>
-            <li><p>2018 梅樹月網站<span><a href="https://msm.limeishu.org.tw/2018" target="_blank" rel="noopener noreferrer">立即前往</a></span></p></li>
-            <li><p>2017 梅樹月網站<span><a href="https://msm.limeishu.org.tw/2017" target="_blank" rel="noopener noreferrer">立即前往</a></span></p></li>
-            <li><p>2017 梅樹月手冊<span><a href="https://issuu.com/verybooks/docs/2017_limeishu-fest" target="_blank" rel="noopener noreferrer">立即查看</a></span></p></li>
+            <li><p>2018 梅樹月網站<span><a href="https://msm.limeishu.org.tw/2018" target="_blank" rel="noopener noreferrer">立即前往 </a></span></p></li>
+            <li><p>2017 梅樹月網站<span><a href="https://msm.limeishu.org.tw/2017" target="_blank" rel="noopener noreferrer">立即前往 </a></span></p></li>
+            <li><p>2017 梅樹月手冊<span><a href="https://issuu.com/verybooks/docs/2017_limeishu-fest" target="_blank" rel="noopener noreferrer">立即查看 </a></span></p></li>
           </ul>
         </div>
       </div>
