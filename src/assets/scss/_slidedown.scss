@@ -1,0 +1,67 @@
+@keyframes slideDown {
+  0% {
+    margin-top: .5rem;
+    height: .5rem;
+  }
+
+  25% {
+    margin-top: .75rem;
+    height: .75rem;
+  }
+
+  50% {
+    margin-top: 1rem;
+    height: .5rem;
+  }
+
+  75% {
+    margin-top: .75rem;
+    height: .75rem;
+  }
+
+  100% {
+    margin-top: .5rem;
+    height: .5rem;
+  }
+}
+
+.slide-down {
+  position: fixed;
+  z-index: 10002;
+  height: 5rem;
+  width: 5rem;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .hint {
+    position: absolute;
+    font-size: 14px;
+    white-space: nowrap;
+    right: 4rem;
+    bottom: 1rem;
+    color: $content;
+  }
+
+  .mouse {
+    border: 3px solid $content;
+    border-radius: 1.5rem;
+    height: 3rem;
+    width: 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .wheel {
+      margin-top: .5rem;
+      height: .5rem;
+      width: 5px;
+      border-radius: 5px;
+      background-color: $content;
+      box-sizing: border-box;
+      animation: slideDown 1s ease-in-out infinite;
+    }
+  }
+}

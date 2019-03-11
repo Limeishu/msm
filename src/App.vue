@@ -5,6 +5,7 @@
       :toggle="isToggleHeader"
       :isMobile="isMobile"
     />
+    <SlideDown v-if="!isMobile && $route.meta.type === 'main'" />
     <transition :name="transitionMode" v-if="!isMobile || $route.meta.type === 'self'">
       <keep-alive>
         <router-view class="main-view" />
@@ -23,13 +24,15 @@ import Home from '@/view/Home'
 import Active from '@/view/Active'
 import Exhibition from '@/view/Exhibition'
 import Header from '@/components/Header'
+import SlideDown from '@/components/SlideDown'
 
 export default {
   components: {
     Header,
     Home,
     Active,
-    Exhibition
+    Exhibition,
+    SlideDown
   },
   data () {
     return {
