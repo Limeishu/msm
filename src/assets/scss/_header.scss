@@ -279,7 +279,6 @@
         width: calc(100% + 36px);
         margin-left: -36px;
         margin-top: 1rem;
-        text-shadow: none;
 
         @media screen and (max-width: 1680px) {
           margin-top: 0;
@@ -288,10 +287,6 @@
         @media screen and (max-width: 1440px) {
           width: calc(100% + 26px);
           margin-left: -26px;
-        }
-
-        @media screen and (max-width: 900px) {
-          text-shadow: inherit;
         }
 
         @media screen and (max-width: 650px) {
