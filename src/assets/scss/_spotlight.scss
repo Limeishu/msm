@@ -47,7 +47,7 @@
     height: calc(100% - 3rem * 2);
     flex-direction: row-reverse;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1560px) {
       margin: 3rem 0;
       height: calc(100% - 3rem * 2);
     }
@@ -109,7 +109,7 @@
         text-decoration-color: rgba($content, .5);
         font-size: 32px;
 
-        @media screen and (max-width: 1440px) {
+        @media screen and (max-width: 1560px) {
           font-size: 26px;
         }
 
@@ -129,7 +129,7 @@
         flex-direction: column;
         font-size: 20px;
 
-        @media screen and (max-width: 1440px) {
+        @media screen and (max-width: 1560px) {
           font-size: 15.6px;
         }
 

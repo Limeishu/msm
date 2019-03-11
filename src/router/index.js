@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/view/Home'
 import Active from '@/view/Active'
+import Intro from '@/view/Intro'
 import Exhibition from '@/view/Exhibition'
 import Landing from '@/view/Landing'
 
@@ -21,13 +22,23 @@ const router = new Router({
       }
     },
     {
+      path: '/intro',
+      name: 'Intro',
+      component: Intro,
+      meta: {
+        label: '展覽緣起',
+        type: 'main',
+        index: 1
+      }
+    },
+    {
       path: '/active',
       name: 'Active',
       component: Active,
       meta: {
         label: '活動列表',
         type: 'main',
-        index: 1
+        index: 2
       }
     },
     {
@@ -37,7 +48,7 @@ const router = new Router({
       meta: {
         label: '展覽資訊',
         type: 'main',
-        index: 2
+        index: 3
       }
     },
     {
