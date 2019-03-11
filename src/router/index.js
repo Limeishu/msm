@@ -25,7 +25,7 @@ const router = new Router({
       name: 'Active',
       component: Active,
       meta: {
-        label: '活動',
+        label: '活動列表',
         type: 'main',
         index: 1
       }
@@ -35,7 +35,7 @@ const router = new Router({
       name: 'Exhibition',
       component: Exhibition,
       meta: {
-        label: '活動',
+        label: '展覽資訊',
         type: 'main',
         index: 2
       }
