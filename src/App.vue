@@ -47,7 +47,6 @@ export default {
     this.toggleHeader()
     this.toggleDevice()
     window.addEventListener('resize', this.toggleDevice, false)
-
   },
   methods: {
     toggleDevice () {
