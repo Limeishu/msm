@@ -37,14 +37,6 @@
   margin-right: 3rem;
   transition: all ease-in-out .3s;
 
-  @media screen and (min-width: 1920px) {
-    margin-right: 1.5rem;
-
-    &.home {
-      margin-right: 200px;
-    }
-  }
-
   .hint {
     position: absolute;
     font-size: 14px;
