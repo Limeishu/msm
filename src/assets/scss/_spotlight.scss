@@ -80,6 +80,7 @@
 
       @media screen and (max-width: 650px) {
         writing-mode: horizontal-tb;
+        margin-top: 2rem;
       }
     }
 
@@ -127,7 +128,40 @@
       ul {
         display: inline-flex;
         flex-direction: column;
-        font-size: 20px;
+        font-size: 18px;
+
+        li {
+          p {
+            display: flex;
+            white-space: nowrap;
+            line-height: 1.4;
+
+            a {
+              text-decoration: none;
+              color: inherit;
+              font-weight: 700;
+            }
+
+            &.subtitle {
+              margin-left: .5rem;
+
+              @media screen and (max-width: 650px) {
+                margin: 0;
+                margin-bottom: .5rem;
+              }
+            }
+
+            span {
+              margin-top: 2rem;
+              white-space: pre-wrap;
+
+              @media screen and (max-width: 650px) {
+                margin: 0;
+                margin-left: 1rem;
+              }
+            }
+          }
+        }
 
         @media screen and (max-width: 1560px) {
           font-size: 15.6px;
