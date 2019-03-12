@@ -158,7 +158,14 @@
               }
             }
 
-            span {
+            .hidden {
+              &,
+              &::selection {
+                color: transparent;
+              }
+            }
+
+            span:not(.hidden) {
               margin-top: 2rem;
               white-space: pre-wrap;
 
