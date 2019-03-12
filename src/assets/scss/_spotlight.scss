@@ -152,6 +152,10 @@
             &.subtitle {
               margin-left: .5rem;
 
+              @media screen and (max-width: 900px) {
+                white-space: inherit;
+              }
+
               @media screen and (max-width: 650px) {
                 margin: 0;
                 margin-bottom: .5rem;
