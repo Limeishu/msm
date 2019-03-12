@@ -63,10 +63,11 @@ export default {
         window.addEventListener('mousewheel', this.scrollHandler, false)
         window.addEventListener('DOMMouseScroll', this.scrollHandler, false)
       } else {
-        this.$router.push({ name: 'Home' })
         window.removeEventListener('mousewheel', this.scrollHandler)
         window.removeEventListener('DOMMouseScroll', this.scrollHandler)
       }
+
+      if (/iPad|iPhone|Android|Mobile/i.test(navigator.userAgent)) this.$router.push({ name: 'Home' })
     },
     toggleHeader () {
       if (this.$route.name !== 'Home') this.isToggleHeader = true
