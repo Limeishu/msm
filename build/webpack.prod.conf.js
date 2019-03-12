@@ -118,16 +118,15 @@ const webpackConfig = merge(baseWebpackConfig, {
       }
     ]),
 
-    new PrerenderPlugin(
-      path.resolve(__dirname, '../dist'),
-      [ '/2019', '/2019/landing', '/2019/intro', '/2019/active', '/2019/exhibition' ],
-      {
-        renderAfterTime: 5000,
-        phantomPageSettings: {
-          loadImages: true
-        }
-      }
-    )
+    new PrerenderPlugin({
+      staticDir: path.resolve(__dirname, '../dist'),
+      routes: [ '/2019', '/2019/landing', '/2019/intro', '/2019/active', '/2019/exhibition' ],
+      renderer: new PrerenderPlugin.PuppeteerRenderer({
+        timeout: 1000,
+        renderAfterTime: 1000,
+        maxConcurrentRoutes: 1
+      })
+    })
   ]
 })
 

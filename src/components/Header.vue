@@ -32,10 +32,10 @@
               <img src="/2019/static/img/logo-min-white.svg" alt="">
             </a>
             <div class="content">
-              <p>© 1995 - 2018 李梅樹紀念館</p>
+              <p>© 1995 - 2019 李梅樹紀念館</p>
               <p>
                 本著作係採用
-                <a href="https://raw.githubusercontent.com/Limeishu/limeishu.org/beta/LICENSE" target="_blank">MIT 授權條款</a> 授權
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0 授權條款</a> 授權
               </p>
               <p>我們推薦使用
                 <a href="https://www.mozilla.org/firefox/" target="_blank">Firefox Quantum</a> 瀏覽以獲得更好的瀏覽體驗
